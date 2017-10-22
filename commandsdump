@@ -1,0 +1,6 @@
+# CACHE GIT PASSWORD:
+git config credential.helper store
+
+# INSTALL APT-SELECT:
+sudo pip install apt-select && sudo pip install --upgrade html5lib==1.0b8
+
