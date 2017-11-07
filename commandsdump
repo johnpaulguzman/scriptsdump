@@ -6,3 +6,7 @@ git config credential.helper store
 # INSTALL APT-SELECT:
 sudo pip install apt-select && sudo pip install --upgrade html5lib==1.0b8
 
+sudo apt install screen
+screen
+screen ctrl + A, D
+screen -r

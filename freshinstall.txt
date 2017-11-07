@@ -1,0 +1,6 @@
+# select aus mirror
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt install -y sublime-text-installer
+sudo apt install -y clipit python-pip python3-pip git vlc gummi
+sudo apt upgrade -y
