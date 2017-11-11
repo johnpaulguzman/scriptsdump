@@ -10,3 +10,12 @@ sudo apt install screen
 screen
 screen ctrl + A, D
 screen -r
+
+# COMPLETE UNINSTALL
+sudo apt-get purge --auto-remove <PACKAGE_NAME>
+
+# Installed packages dump: conky
+
+# FIND FILE: sudo find / -name "conky.*"
+
+# FIND connection INTERFACE name: Select "Networking" > "Connection Information"
