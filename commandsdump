@@ -19,3 +19,16 @@ sudo apt-get purge --auto-remove <PACKAGE_NAME>
 # FIND FILE: sudo find / -name "conky.*"
 
 # FIND connection INTERFACE name: Select "Networking" > "Connection Information"
+
+# THEMES: extract folder to ~/.themes folder
+
+=====
+One thing that many other answers are missing is how to detach a running process that currently blocks the shell. In most terminals and shells, Ctrl+Z will halt the running process and bring you back to an input prompt. Then, you can issue
+
+bg
+
+to send the running process into the background. Issue
+
+fg
+
+instead to put the running process back into the foreground.

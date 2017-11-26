@@ -25,7 +25,7 @@ if  __name__ == "__main__":
         latext = get_clipboard()
         print("{} GET TEXT {}".format(*([border_texts]*2)))
         print(latext)
-        new_latext = latext.replace("(", "\ml(").replace(")", "\mr)").replace("\Bigg\ml(", "\Bigg(").replace("\Bigg\mr)", "\Bigg)")
+        new_latext = latext.replace("(", "\ml(").replace(")", "\mr)").replace("\Bigg\ml(", "\Bigg(").replace("\Bigg\mr)", "\Bigg)").replace("\ml\ml(", "\ml(").replace("\mr\mr)", "\mr)")
         print("{} SET TEXT {}".format(*([border_texts]*2)))
         print(new_latext)
         set_clipboard(new_latext)
