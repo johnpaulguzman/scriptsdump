@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # Use: python ydler.py [OPTIONAL-RESOLUTION] [URL]
 
+from __future__ import unicode_literals
 import sys
 import re
 import os
@@ -24,7 +25,7 @@ ydl_opts = {
     'ignoreerrors': True,
     'verbose': True,
     'format': 'bestvideo[height<={}]+bestaudio/best[height<={}]/best'.format(res, res),       
-    #'outtmpl': '%(id)s',        
+    'outtmpl': '%(playlist_index)s-%(title)s-%(id)s.%(ext)s',        
     #'noplaylist' : True,        
     'progress_hooks': [my_hook],  
 }
