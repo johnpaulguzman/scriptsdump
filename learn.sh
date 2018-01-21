@@ -22,14 +22,54 @@ echo "echo SC 1" ; notarealcommand ; echo "echo SC 2"
 ## args if else
 argnummin=2
 argnummax=5
-if [[ ${#} -lt ${argnummin} ]]; then
+if [[ ${#} < ${argnummin} ]]; then
 	echo "${0} must have at least ${argnummin} arguments."
-elif [[ ${argnummax} -lt ${#} ]]; then
+elif [[ ${#} > ${argnummax} ]]; then
 	echo "${0} must have at most ${argnummax} arguments."
 else
 	echo "argument number is acceptable"
 fi
 echo "args: ${@}"
-exit $? # returns last ran exit code
 
-# continue 6- 12:33
+comp1="1"
+comp2="2"
+notnully="im not null"
+nully=""
+if [[ "${comp1}" == "${comp2}" ]]; then
+	echo "${comp1}==${comp2}"
+else
+	echo "${comp1}!=${comp2}"
+fi
+
+if [[ -n "${notnully}" ]]; then
+	echo "this one's not null"
+fi
+
+if [[ -z "${nully}" ]]; then
+	echo "this one's null"
+fi
+
+A=( 1 2 3 4 )
+B=("${A[@]:1:2}") # slice from 1 to 2
+C=("${A[@]:1}")   # slice from 1 to the end of the array
+echo "${A[0]}"
+echo "${B[@]}"
+echo "${C[@]}"
+
+for arg in ${A[@]}; do 
+	echo "$((arg + 10))"
+done
+
+i=0
+while [[ ${i} < 5 ]]; do
+	echo "${i}"
+	i=$(( ${i} + 1 ))
+done
+
+function sayHi(){
+	echo "Hello ${1}, how are you today?"
+}
+
+sayHi Papu
+
+exit $? # returns last ran exit code

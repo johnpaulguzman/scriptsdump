@@ -1,3 +1,3 @@
 # Use: bash savepage.sh [URL]
 args=("$@")
-wget -mkEpnp ${args[0]}
+wget --recursive --no-clobber --page-requisites --convert-links --no-parent --mirror -e robots=off ${args[0]}
