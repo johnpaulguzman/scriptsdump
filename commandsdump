@@ -1,4 +1,5 @@
-SAVE UTILS: autokey-gtk
+# OPEN FILE EXPLORER IN ROOT MODE
+sudo pcmanfm <DIRECTORY>
 
 ### 1. Clone your fork:
 
