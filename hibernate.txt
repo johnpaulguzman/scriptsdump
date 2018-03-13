@@ -1,0 +1,44 @@
+
+How to Enable Hibernation on Ubuntu 17.10 Desktop
+!robot | 10/28/2017 | Labs, Linux Ubuntu | No Comments
+
+Few days ago we showed you how to suspend your Ubuntu computer so that it goes to sleep but keep your documents and programs in their current state while the computer is partially switched off.
+
+Partially switched off means the computer is not entirely switched off. Other parts will still use limited power to quickly resume the machine when ready to use again. Alternatively, you can use the hibernation feature on Ubuntu 17.10
+
+When the computer hibernates, all of your applications and documents are stored and the computer completely switches off so it does not use any power, but the applications and documents will still be open when you switch on the computer again.
+
+This feature is not very stable with Ubuntu machines.. so it was disabled by default.
+
+If your computer supports it, you can turn it on. To do that, follow the guide below:
+
+To quickly test if your computer supports hibernation, open the command line terminal and run the commands below.
+
+sudo systemctl hibernate
+
+If you are able to resume and your applications and documents still intact, then it might be working for you. To enable hibernation on Ubuntu menu, run the commands below to create a hibernation.pkla file.
+
+sudo nano /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
+
+Then add the content below into the file and save it.
+
+[Enable hibernate by default in power]
+Identity=unix-user:*
+Action=org.freedesktop.upower.hibernate
+ResultActive=yes
+
+[Enable hibernate by default in logind]
+Identity=unix-user:*
+Action=org.freedesktop.login1.hibernate;org.freedesktop.login1.handle-hibernate-key;org.freedesktop.login1;org.freedesktop.login1.hibernate-multiple-sessions;org.freedesktop.login1.hibernate-ignore-inhibit
+ResultActive=yes
+
+Save the file and you should have the option to hibernate your computer from the system menu.
+
+If hibernate doesn’t work:
+Check if your swap partition is at least as large as your available RAM. The presence of btrfs partitions has proved to make hibernation fail, so check that you’re not using any btrfs partitions. Besides removing or reformatting such partitions, you may need to remove the btrfs-tools package:
+
+sudo apt purge btrfs-tools
+
+Restart your computer and hopefully everything works. When you lock your screen, click the Power button from the top corner and you should see the hibernation option.
+
+Congratulations! you’ve just re-enabled Ubuntu hibernation.
