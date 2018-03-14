@@ -1,4 +1,4 @@
-
+Kupfer uses 60MB of ram, this can be an alternative to cairo-dock which uses 90MB of ram
 
 # OPEN FILE EXPLORER IN ROOT MODE
 sudo pcmanfm <DIRECTORY>
