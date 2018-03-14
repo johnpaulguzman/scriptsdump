@@ -1,3 +1,7 @@
+# BOOT REPAIR
+sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
+sudo apt-get install -y boot-repair && boot-repair
+
 Kupfer uses 60MB of ram, this can be an alternative to cairo-dock which uses 90MB of ram
 
 # OPEN FILE EXPLORER IN ROOT MODE
