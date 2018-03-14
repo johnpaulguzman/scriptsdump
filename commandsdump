@@ -1,3 +1,7 @@
+# LUBUNTU TWEAKS
+https://sites.google.com/site/easylinuxtipsproject/first-lubuntu
+https://sites.google.com/site/easylinuxtipsproject/speed
+
 # BOOT REPAIR
 sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
 sudo apt-get install -y boot-repair && boot-repair
