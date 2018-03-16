@@ -1,6 +1,13 @@
+# cls
+printf "\033c"
+
+sudo chmod 777 ~/.config/autokey/ -R
+
 # LUBUNTU TWEAKS
 https://sites.google.com/site/easylinuxtipsproject/first-lubuntu
 https://sites.google.com/site/easylinuxtipsproject/speed
+NOTE: you can drag executables to applocation launch bar
+read -rsp $'Press any key to continue...\n' -n1 key
 
 # BOOT REPAIR
 sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
