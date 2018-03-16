@@ -41,8 +41,24 @@ Plugin {
   }
 }
 Plugin {
+  type=separator
+  Config {
+  }
+}
+Plugin {
+  type=space
+  Config {
+  }
+}
+Plugin {
   type=launchbar
   Config {
+    Button {
+      id=/home/guzman/OOM/start.sh
+    }
+    Button {
+      id=firefox.desktop
+    }
     Button {
       id=pcmanfm.desktop
     }
@@ -57,9 +73,6 @@ Plugin {
     }
     Button {
       id=sublime-text.desktop
-    }
-    Button {
-      id=firefox.desktop
     }
     Button {
       id=lxterminal.desktop
@@ -96,6 +109,20 @@ Plugin {
   Config {
   }
   expand=1
+}
+Plugin {
+  type=launchbar
+  Config {
+    Button {
+      id=/home/guzman/OOM/compile.sh
+    }
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=51
+  }
 }
 Plugin {
   type=separator
@@ -149,18 +176,10 @@ Plugin {
 Plugin {
   type=dclock
   Config {
-    ClockFmt=%R
-    TooltipFmt=%A %x
+    ClockFmt=%m/%d %R
+    TooltipFmt=%a %B %e %G %k:%M
     BoldFont=1
     IconOnly=0
     CenterText=0
-  }
-}
-Plugin {
-  type=launchbar
-  Config {
-    Button {
-      id=lxqt-leave.desktop
-    }
   }
 }
